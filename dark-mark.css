@@ -1,78 +1,97 @@
 /* ==UserStyle==
-@name           Kirka.io Dark Mode + White Buttons
+@name           Kirka Redline Client Dark Mode
 @namespace      kirka.io
 @version        1.0
-@description    Dark mode theme for kirka.io with white buttons
-@author         chatgpt
+@description    Custom CSS for Kirka.io, Dark Mode for Redline Client
 @match          *://kirka.io/*
 ==/UserStyle== */
 
-@-moz-document domain("kirka.io") {
-  /* General Background */
-  body, html {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-    font-family: 'Segoe UI', sans-serif !important;
-  }
+/* General Dark Mode */
+body, html {
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Arial', sans-serif !important;
+}
 
-  /* Menu, Modals, and Settings Panels */
-  .menu, .modal, .popup, .settings-container, .hud, .content {
-    background-color: #1e1e1e !important;
-    color: #ffffff !important;
-    border: 1px solid #333 !important;
-  }
+/* Menu, Modals, and Panels */
+.menu, .modal, .popup, .settings-container, .hud {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border: 2px solid #444 !important;
+  border-radius: 8px !important;
+}
 
-  /* Input Fields and Select Boxes */
-  input, select, textarea {
-    background-color: #222 !important;
-    color: #fff !important;
-    border: 1px solid #444 !important;
-  }
+/* Buttons - White with Dark Border */
+button, .btn, .button, .redline-btn {
+  background-color: #ffffff !important;
+  color: #121212 !important;
+  border: 1px solid #333 !important;
+  border-radius: 5px !important;
+  padding: 6px 12px !important;
+  transition: background-color 0.3s ease;
+}
 
-  /* White Buttons */
-  button, .btn, .button {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border: none !important;
-    transition: background-color 0.3s ease;
-  }
+button:hover, .btn:hover, .redline-btn:hover {
+  background-color: #e0e0e0 !important;
+}
 
-  button:hover, .btn:hover {
-    background-color: #e0e0e0 !important;
-  }
+/* Input Fields */
+input, select, textarea {
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid #444 !important;
+  border-radius: 4px !important;
+  padding: 5px !important;
+}
 
-  /* Crosshair */
-  #crosshair {
-    width: 5px !important;
-    height: 5px !important;
-    background: white !important;
-    border-radius: 50% !important;
-    border: none !important;
-    mix-blend-mode: difference !important;
-  }
+/* Crosshair */
+#crosshair {
+  width: 6px !important;
+  height: 6px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  border: none !important;
+  mix-blend-mode: difference !important;
+}
 
-  /* Hide chat, ads, and footer */
-  #chat-container, .ad-container, .footer {
-    display: none !important;
-  }
+/* Hide UI elements (Chat, Ads, Footer) */
+#chat-container, .ad-container, .footer {
+  display: none !important;
+}
 
-  /* Game HUD transparency for clean look */
-  .hud {
-    background: rgba(0, 0, 0, 0.3) !important;
-  }
+/* Transparency for HUD */
+.hud {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
 
-  /* Scrollbar styling */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #1e1e1e;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 4px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #777;
-  }
+/* Header and Footer Styling */
+header, footer {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Scoreboard and Leaderboard - Minimal look */
+.leaderboard, .scoreboard {
+  background-color: rgba(30, 30, 30, 0.8) !important;
+  border: 1px solid #444 !important;
+  color: #ffffff !important;
+}
+
+/* Scrollbars Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }
