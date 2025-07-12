@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           Kirka.io Dark Mode + White Buttons
+@namespace      kirka.io
+@version        1.0
+@description    Dark mode theme for kirka.io with white buttons
+@author         chatgpt
+@match          *://kirka.io/*
+==/UserStyle== */
+
+@-moz-document domain("kirka.io") {
+  /* General Background */
+  body, html {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    font-family: 'Segoe UI', sans-serif !important;
+  }
+
+  /* Menu, Modals, and Settings Panels */
+  .menu, .modal, .popup, .settings-container, .hud, .content {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333 !important;
+  }
+
+  /* Input Fields and Select Boxes */
+  input, select, textarea {
+    background-color: #222 !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+  }
+
+  /* White Buttons */
+  button, .btn, .button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover, .btn:hover {
+    background-color: #e0e0e0 !important;
+  }
+
+  /* Crosshair */
+  #crosshair {
+    width: 5px !important;
+    height: 5px !important;
+    background: white !important;
+    border-radius: 50% !important;
+    border: none !important;
+    mix-blend-mode: difference !important;
+  }
+
+  /* Hide chat, ads, and footer */
+  #chat-container, .ad-container, .footer {
+    display: none !important;
+  }
+
+  /* Game HUD transparency for clean look */
+  .hud {
+    background: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777;
+  }
+}
