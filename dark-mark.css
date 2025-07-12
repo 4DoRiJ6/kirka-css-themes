@@ -1,97 +1,91 @@
 /* ==UserStyle==
-@name           Kirka Redline Client Dark Mode
+@name           Kirka Home Page Dark Mode
 @namespace      kirka.io
 @version        1.0
-@description    Custom CSS for Kirka.io, Dark Mode for Redline Client
+@description    Dark mode theme for the homepage UI of Kirka.io
 @match          *://kirka.io/*
 ==/UserStyle== */
 
-/* General Dark Mode */
-body, html {
+/* Home - Homepage UI */
+.homepage {
   background-color: #121212 !important;
-  color: #fff !important;
-  font-family: 'Arial', sans-serif !important;
-}
-
-/* Menu, Modals, and Panels */
-.menu, .modal, .popup, .settings-container, .hud {
-  background-color: #1e1e1e !important;
   color: #ffffff !important;
-  border: 2px solid #444 !important;
-  border-radius: 8px !important;
+  font-family: 'Segoe UI', sans-serif !important;
+  text-align: center !important;
 }
 
-/* Buttons - White with Dark Border */
-button, .btn, .button, .redline-btn {
+.homepage-header {
+  font-size: 36px !important;
+  font-weight: bold !important;
+  color: #ffffff !important;
+  margin-top: 20px !important;
+}
+
+/* Style for the main button */
+.homepage-button {
   background-color: #ffffff !important;
   color: #121212 !important;
-  border: 1px solid #333 !important;
-  border-radius: 5px !important;
-  padding: 6px 12px !important;
-  transition: background-color 0.3s ease;
+  font-size: 18px !important;
+  border: 2px solid #444 !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover, .btn:hover, .redline-btn:hover {
+.homepage-button:hover {
   background-color: #e0e0e0 !important;
+  transform: scale(1.05) !important;
 }
 
-/* Input Fields */
-input, select, textarea {
-  background-color: #222 !important;
-  color: #fff !important;
-  border: 1px solid #444 !important;
-  border-radius: 4px !important;
-  padding: 5px !important;
+/* Main container with some padding */
+.homepage-container {
+  padding: 50px !important;
 }
 
-/* Crosshair */
-#crosshair {
-  width: 6px !important;
-  height: 6px !important;
-  background: white !important;
-  border-radius: 50% !important;
-  border: none !important;
-  mix-blend-mode: difference !important;
+/* Navigation links (if any) */
+.homepage-nav {
+  margin-top: 20px !important;
 }
 
-/* Hide UI elements (Chat, Ads, Footer) */
-#chat-container, .ad-container, .footer {
-  display: none !important;
-}
-
-/* Transparency for HUD */
-.hud {
-  background: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Header and Footer Styling */
-header, footer {
-  background-color: rgba(0, 0, 0, 0.7) !important;
+.homepage-nav a {
+  text-decoration: none !important;
   color: #ffffff !important;
-  border: none !important;
+  font-size: 18px !important;
+  margin: 0 15px !important;
+  transition: color 0.3s ease;
 }
 
-/* Scoreboard and Leaderboard - Minimal look */
-.leaderboard, .scoreboard {
-  background-color: rgba(30, 30, 30, 0.8) !important;
-  border: 1px solid #444 !important;
+.homepage-nav a:hover {
+  color: #1e90ff !important;
+}
+
+/* Footer area (if needed) */
+.homepage-footer {
+  background-color: #1c1c1c !important;
+  color: #a1a1a1 !important;
+  padding: 20px !important;
+  font-size: 14px !important;
+  text-align: center !important;
+}
+
+.homepage-footer a {
+  text-decoration: none !important;
+  color: #a1a1a1 !important;
+}
+
+.homepage-footer a:hover {
   color: #ffffff !important;
 }
 
-/* Scrollbars Styling */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #222;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #777;
+/* Background effects (for visual flair) */
+.homepage-bg {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: url('https://www.example.com/your-background-image.jpg') no-repeat center center fixed !important;
+  background-size: cover !important;
+  opacity: 0.3 !important;
+  z-index: -1 !important;
 }
